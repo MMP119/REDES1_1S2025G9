@@ -1,0 +1,47 @@
+VENTAS
+
+Ventas1: 192.168.15.2
+Ventas2: 192.168.15.3
+Ventas3: 192.168.15.4
+Ventas4: 192.168.15.5
+Ventas5: 192.168.15.6
+
+
+
+SOPORTE
+
+Soporte Tecnico 1: 192.168.25.2
+Soporte Tecnico 2: 192.168.25.3
+Soporte Tecnico 3: 192.168.25.4
+
+
+
+GERENCIA
+
+Gerencia1: 192.168.35.2
+Gerencia2: 192.168.35.3
+Gerencia3: 192.168.35.4
+Gerencia4: 192.168.35.5
+Gerencia5: 192.168.35.6
+
+
+
+
+SEGURIDAD
+
+Seguridad 1: 192.168.45.2
+Seguridad 2: 192.168.45.3
+Seguridad 3: 192.168.45.4
+Seguridad 4: 192.168.45.5
+Seguridad 5: 192.168.45.6
+Seguridad 6: 192.168.45.7
+Seguridad 7: 192.168.45.8
+
+
+
+RECEPCION
+
+Recepcion 1: 192.168.55.2
+Recepcion 2: 192.168.55.3
+Recepcion 3: 192.168.55.4
+Recepcion 4: 192.168.55.5
