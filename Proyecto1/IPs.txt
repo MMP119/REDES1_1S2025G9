@@ -13,6 +13,8 @@ SOPORTE
 Soporte Tecnico 1: 192.168.25.2
 Soporte Tecnico 2: 192.168.25.3
 Soporte Tecnico 3: 192.168.25.4
+Soporte Tecnico 4: 192.168.25.5
+Soporte Tecnico 5: 192.168.25.6
 
 
 

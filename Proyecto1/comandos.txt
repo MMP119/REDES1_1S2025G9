@@ -107,6 +107,7 @@ exit
 
 
 
+
 Acceso a las PC´s:
 
 SW1
@@ -181,7 +182,6 @@ vtp password secure2025
 interface range FastEthernet0/2-5
 switchport mode trunk
 
-
 Acceso a las PC´s:
 
 SW8
@@ -216,5 +216,116 @@ switchport access vlan 45
 interface FastEthernet0/12
 switchport mode access
 switchport access vlan 25
+
+
+AREA DE GERENCIA
+
+SW11
+enable
+configure terminal
+vtp domain G9_technet
+vtp mode client
+vtp password secure2025
+interface range FastEthernet0/1 - 2
+switchport mode trunk
+
+SW13	
+enable
+configure terminal
+vtp domain G9_technet
+vtp mode client
+vtp password secure2025
+interface range FastEthernet0/2-5
+switchport mode trunk
+
+SW12
+enable
+configure terminal
+vtp domain G9_technet
+vtp mode client
+vtp password secure2025
+interface range FastEthernet0/2-5
+switchport mode trunk
+
+Acceso a las PC´s:
+
+SW11
+enable
+configure terminal
+interface FastEthernet0/11
+switchport mode access
+switchport access vlan 45
+interface FastEthernet0/12
+switchport mode access
+switchport access vlan 25
+
+SW12
+enable
+configure terminal
+interface FastEthernet0/11
+switchport mode access
+switchport access vlan 35
+
+SW13
+enable
+configure terminal
+interface FastEthernet0/11
+switchport mode access
+switchport access vlan 35
+
+
+AREA DE INFRAESTRUCTURA
+
+MSW8
+enable
+configure terminal
+vtp domain G9_technet
+vtp mode client
+vtp password secure2025
+interface range FastEthernet0/1 - 5
+switchport trunk encapsulation dot1q
+switchport mode trunk
+
+SW6
+enable
+configure terminal
+vtp domain G9_technet
+vtp mode client
+vtp password secure2025
+interface FastEthernet0/1
+switchport mode trunk
+
+SW7
+enable
+configure terminal
+vtp domain G9_technet
+vtp mode client
+vtp password secure2025
+interface FastEthernet0/1
+switchport mode trunk
+
+Acceso a las PC´s:
+
+SW6
+enable
+configure terminal
+interface FastEthernet0/11
+switchport mode access
+switchport access vlan 25
+interface FastEthernet0/12
+switchport mode access
+switchport access vlan 45
+
+SW7
+enable
+configure terminal
+interface FastEthernet0/11
+switchport mode access
+switchport access vlan 15
+interface FastEthernet0/12
+switchport mode access
+switchport access vlan 45
+
+
 
 
