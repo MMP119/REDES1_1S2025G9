@@ -453,45 +453,53 @@ switchport access vlan 45
 
 ## **PING ENTRE HOSTS**
 
+### Ping entre Hosts en la misma VLAN 15
+![ping15](/Proyecto1/imgs/Ventas1_4.png)
 
+### Ping entre Hosts en la misma VLAN 25
+![ping25](/Proyecto1/imgs/Soporte5_2.png)
 
+### Ping entre Hosts en la misma VLAN 35
+![ping35](/Proyecto1/imgs/Gerencia1_3.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
+### Ping entre Hosts en la misma VLAN 45
+![ping45](/Proyecto1/imgs/Seguridad5_7.png)
 
 
 ---
+## **CONFIGURACION DE ETHERNETCHANNEL INFRAESTRUCTURA/BACKBONE**
 
-## **PRESUPUESTO DEL PROYECTO**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Configuración en MSW8 - MSW9
+```
+Switch> enable
+Switch# configure terminal
+Switch(config)# interface range FastEthernet0/5 - 7
+Switch(config-if-range)# switchport trunk encapsulation dot1q
+Switch(config-if-range)# switchport mode trunk
+Switch(config-if-range)# channel-group 1 mode desirable
+Switch(config-if-range)# exit
+Switch(config)# exit
+Switch# write memory
+Switch# show etherchannel summary
+Switch# show interfaces port-channel 1
+```
 
 
 
+## **CONFIGURACION DE ETHERNETCHANNEL DESARROLLO/BACKBONE**
 
+### Configuración en MSW10 - MSW11
+```
+Switch> enable
+Switch# configure terminal
+Switch(config)# interface range FastEthernet0/8 - 10
+Switch(config-if-range)# switchport trunk encapsulation dot1q
+Switch(config-if-range)# switchport mode trunk
+Switch(config-if-range)# channel-group 2 mode active
+Switch(config-if-range)# exit
+Switch(config)# exit
+Switch# write memory
+Switch# show etherchannel summary
+Switch# show interfaces port-channel 2
+```
 
-----
