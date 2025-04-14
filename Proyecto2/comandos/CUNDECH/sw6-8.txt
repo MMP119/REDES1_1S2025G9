@@ -1,0 +1,48 @@
+SW6
+
+enable
+configure terminal
+
+vtp domain Grupo09
+vtp mode client
+vtp password usac2025
+exit
+
+configure terminal
+interface range fa0/11
+switchport mode access
+switchport access vlan 35
+exit
+
+interface range fa0/12 - 13
+switchport mode access
+switchport access vlan 45
+exit
+
+interface fa0/2
+switchport mode trunk
+switchport trunk allowed vlan 15,25,35,45
+exit
+
+
+SW8
+
+enable
+configure terminal
+
+vtp domain Grupo09
+vtp mode client
+vtp password usac2025
+exit
+
+configure terminal
+interface range fa0/11-12
+switchport mode access
+switchport access vlan 25
+exit
+
+
+interface fa0/2
+switchport mode trunk
+switchport trunk allowed vlan 15,25,35,45
+exit

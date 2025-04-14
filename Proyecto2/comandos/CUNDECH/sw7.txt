@@ -1,0 +1,28 @@
+enable
+configure terminal
+hostname SW7
+
+vtp domain Grupo09
+vtp mode server
+vtp password usac2025
+
+
+vlan 15
+name Estudiantes
+exit
+vlan 25
+name Docentes
+exit
+vlan 35
+name Seguridad
+exit
+vlan 45
+name Biblioteca
+exit
+
+interface range fa0/1-3
+switchport mode trunk
+switchport trunk allowed vlan 15,25,35,45
+exit
+
+
