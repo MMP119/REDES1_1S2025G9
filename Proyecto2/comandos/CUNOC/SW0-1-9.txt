@@ -1,0 +1,50 @@
+SW0
+
+enable
+configure terminal
+hostname SW0
+
+vtp domain Grupo09
+vtp mode client
+vtp password usac2025
+
+interface range fa0/11-12
+switchport mode access
+switchport access vlan 25
+exit
+
+
+-------------------------------
+
+SW9
+
+enable
+configure terminal
+hostname SW9
+
+vtp domain Grupo09
+vtp mode client
+vtp password usac2025
+
+interface fa0/11
+switchport mode access
+switchport access vlan 35
+exit
+
+
+-------------------------------
+
+SW1
+
+enable
+configure terminal
+hostname SW1
+
+vtp domain Grupo09
+vtp mode client
+vtp password usac2025
+
+interface range fa0/11-12
+switchport mode access
+switchport access vlan 15
+exit
