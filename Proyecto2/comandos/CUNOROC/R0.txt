@@ -1,0 +1,27 @@
+enable
+configure terminal
+
+interface g0/0.15
+encapsulation dot1Q 15
+ip address 192.148.9.129 255.255.255.192
+exit
+
+interface g0/0.25
+encapsulation dot1Q 25
+ip address 192.148.9.193 255.255.255.224
+exit
+
+interface g0/0.35
+encapsulation dot1Q 35
+ip address 192.148.9.225 255.255.255.240
+exit
+
+interface g0/0.45
+encapsulation dot1Q 45
+ip address 192.148.9.1 255.255.255.128
+exit
+
+interface g0/0
+no shutdown
+exit
+

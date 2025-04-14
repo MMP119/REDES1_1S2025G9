@@ -1,0 +1,23 @@
+enable
+configure terminal
+hostname SW4
+
+vtp domain Grupo09
+vtp mode client
+vtp password usac2025
+
+interface fa0/1 
+switchport mode trunk
+switchport trunk allowed vlan 15,25,35,45
+exit
+
+interface fa0/11
+switchport mode access
+switchport access vlan 45
+exit
+
+interface fa0/12
+switchport mode access
+switchport access vlan 35
+exit
+
