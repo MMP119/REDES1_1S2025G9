@@ -1,0 +1,43 @@
+enable
+configure terminal
+hostname R5
+
+interface g0/0.15
+encapsulation dot1Q 15
+ip address 192.158.9.131 255.255.255.192
+standby 15 ip 192.158.9.129
+standby 15 priority 100
+standby 15 preempt
+no shutdown
+exit
+
+interface g0/0.25
+encapsulation dot1Q 25
+ip address 192.158.9.195 255.255.255.224
+standby 25 ip 192.158.9.193
+standby 25 priority 100
+standby 25 preempt
+no shutdown
+exit
+
+interface g0/0.35
+encapsulation dot1Q 35
+ip address 192.158.9.227 255.255.255.240
+standby 35 ip 192.158.9.225
+standby 35 priority 100
+standby 35 preempt
+no shutdown
+exit
+
+interface g0/0.45
+encapsulation dot1Q 45
+ip address 192.158.9.3 255.255.255.128
+standby 45 ip 192.158.9.1
+standby 45 priority 100
+standby 45 preempt
+no shutdown
+exit
+
+interface g0/0
+no shutdown
+exit

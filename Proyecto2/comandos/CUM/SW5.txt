@@ -1,0 +1,48 @@
+enable
+configure terminal
+hostname SW5
+
+vlan 15
+name Estudiantes
+exit
+vlan 25
+name Docentes
+exit
+vlan 35
+name Seguridad
+exit
+vlan 45
+name Biblioteca
+exit
+
+interface fa0/11
+switchport mode access
+switchport access vlan 15
+exit
+
+interface fa0/12
+switchport mode access
+switchport access vlan 25
+exit
+
+interface fa0/13
+switchport mode access
+switchport access vlan 35
+exit
+
+interface fa0/14
+switchport mode access
+switchport access vlan 45
+exit
+
+
+interface g0/1
+switchport mode trunk
+switchport trunk allowed vlan 15,25,35,45
+exit
+
+interface g0/2
+switchport mode trunk
+switchport trunk allowed vlan 15,25,35,45
+exit
+

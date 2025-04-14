@@ -1,0 +1,22 @@
+enable
+configure terminal
+hostname R7
+
+interface g0/1.55
+encapsulation dot1Q 55
+ip address 192.120.9.1 255.255.255.0
+exit
+
+interface g0/1.65
+encapsulation dot1Q 65
+ip address 192.121.9.1 255.255.255.0
+exit
+
+interface g0/1.75
+encapsulation dot1Q 75
+ip address 192.122.9.1 255.255.255.0
+exit
+
+interface g0/1
+no shutdown
+exit
