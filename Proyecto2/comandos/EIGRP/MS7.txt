@@ -1,0 +1,21 @@
+enable
+configure terminal
+
+interface GigabitEthernet0/1
+ no switchport
+ ip address 10.0.0.89 255.255.255.252
+ no shutdown
+exit
+
+router eigrp 90
+ network 10.0.0.88 0.0.0.3
+ no auto-summary
+exit
+
+router ospf 1
+ redistribute eigrp 90 subnets
+exit
+
+router eigrp 90
+ redistribute ospf 1 metric 10000 100 255 1 1500
+exit

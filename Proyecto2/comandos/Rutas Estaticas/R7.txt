@@ -1,0 +1,34 @@
+enable
+configure terminal
+
+
+interface GigabitEthernet0/0
+ ip address 10.0.0.90 255.255.255.252
+ no shutdown
+exit
+
+
+interface GigabitEthernet0/1.1
+ encapsulation dot1Q 1
+ ip address 192.121.9.1 255.255.255.0
+ no shutdown
+exit
+
+interface GigabitEthernet0/1.2
+ encapsulation dot1Q 2
+ ip address 192.122.9.1 255.255.255.0
+ no shutdown
+exit
+
+interface GigabitEthernet0/1.3
+ encapsulation dot1Q 3
+ ip address 192.123.9.1 255.255.255.0
+ no shutdown
+exit
+
+interface GigabitEthernet0/1
+ no shutdown
+exit
+
+ip route 0.0.0.0 0.0.0.0 10.0.0.89
+exit

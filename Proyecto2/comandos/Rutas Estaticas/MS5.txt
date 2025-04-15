@@ -1,0 +1,15 @@
+enable
+configure terminal
+
+interface GigabitEthernet0/1
+ no switchport
+ ip address 10.0.0.89 255.255.255.252
+ no shutdown
+exit
+
+ip routing
+
+ip route 192.121.9.0 255.255.255.0 10.0.0.90
+ip route 192.122.9.0 255.255.255.0 10.0.0.90
+ip route 192.123.9.0 255.255.255.0 10.0.0.90
+exit

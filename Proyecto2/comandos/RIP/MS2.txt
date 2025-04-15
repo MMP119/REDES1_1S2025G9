@@ -1,7 +1,6 @@
 enable
 configure terminal
 
-
 interface FastEthernet0/1
 no switchport
 ip address 10.0.0.17 255.255.255.252

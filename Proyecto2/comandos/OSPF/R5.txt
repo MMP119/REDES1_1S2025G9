@@ -1,0 +1,15 @@
+enable
+configure terminal
+
+interface GigabitEthernet0/1
+ip address 10.0.0.86 255.255.255.252
+no shutdown
+exit
+
+router ospf 1
+network 10.0.0.84 0.0.0.3 area 0
+ network 192.158.9.128 0.0.0.63 area 0  
+ network 192.158.9.192 0.0.0.31 area 0  
+ network 192.158.9.224 0.0.0.15 area 0  
+ network 192.158.9.0 0.0.0.127 area 0   
+exit

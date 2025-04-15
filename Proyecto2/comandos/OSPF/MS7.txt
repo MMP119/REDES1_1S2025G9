@@ -1,0 +1,64 @@
+enable
+configure terminal
+ip routing
+
+interface FastEthernet0/1
+no switchport
+ip address 10.0.0.58 255.255.255.252
+no shutdown
+exit
+
+router ospf 1
+network 10.0.0.56 0.0.0.3 area 0
+exit
+
+interface FastEthernet0/2
+no switchport
+ip address 10.0.0.62 255.255.255.252
+no shutdown
+exit
+
+router ospf 1
+network 10.0.0.60 0.0.0.3 area 0
+exit
+
+interface FastEthernet0/3
+no switchport
+ip address 10.0.0.66 255.255.255.252
+no shutdown
+exit
+
+router ospf 1
+network 10.0.0.64 0.0.0.3 area 0
+exit
+
+
+interface FastEthernet0/4
+no switchport
+ip address 10.0.0.70 255.255.255.252
+no shutdown
+exit
+
+router ospf 1
+network 10.0.0.68 0.0.0.3 area 0
+exit
+
+interface FastEthernet0/5
+no switchport
+ip address 10.0.0.74 255.255.255.252
+no shutdown
+exit
+
+router ospf 1
+network 10.0.0.72 0.0.0.3 area 0
+exit
+
+interface FastEthernet0/6
+no switchport
+ip address 10.0.0.78 255.255.255.252
+no shutdown
+exit
+
+router ospf 1
+network 10.0.0.76 0.0.0.3 area 0
+exit

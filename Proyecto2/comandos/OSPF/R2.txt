@@ -1,0 +1,41 @@
+Enlace		Dispositivo A	Interfaz A	Dispositivo B	Interfaz B
+R2 ↔ R3		R2		Gi0/0		R3		Gi0/0
+R3 ↔ MS4	R3		Gi0/1		MS4		Gi0/1
+MS4 ↔ MS5	MS4		Fa0/1		MS5		Fa0/1
+MS4 ↔ MS5	MS4		Fa0/2		MS5		Fa0/2
+MS4 ↔ MS5	MS4		Fa0/3		MS5		Fa0/3
+MS4 ↔ MS6	MS4		Fa0/4		MS6		Fa0/1
+MS4 ↔ MS6	MS4		Fa0/5		MS6		Fa0/2
+MS4 ↔ MS6	MS4		Fa0/6		MS6		Fa0/3
+MS5 ↔ MS7	MS5		Fa0/4		MS7		Fa0/1
+MS5 ↔ MS7	MS5		Fa0/5		MS7		Fa0/2
+MS5 ↔ MS7	MS5		Fa0/6		MS7		Fa0/3
+MS6 ↔ MS7	MS6		Fa0/4		MS7		Fa0/4
+MS6 ↔ MS7	MS6		Fa0/5		MS7		Fa0/5
+MS6 ↔ MS7	MS6		Fa0/6		MS7		Fa0/6
+MS6 ↔ R4	MS6		Gi0/1		R4		Gi0/1
+MS6 ↔ R5	MS6		Gi0/2		R5		Gi0/1
+
+
+
+enable
+configure terminal
+
+interface GigabitEthernet0/0
+ ip address 10.0.0.25 255.255.255.252
+ no shutdown
+exit
+
+router ospf 1
+ network 10.0.0.24 0.0.0.3 area 0
+exit
+
+
+router rip
+ redistribute ospf 1 metric 1
+exit
+
+router ospf 1
+ redistribute rip subnets
+exit
+
